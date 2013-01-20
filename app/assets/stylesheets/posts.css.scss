@@ -1,0 +1,67 @@
+#posts_header {
+	width: 75%;
+	height: 10%;
+	background-color: blue;
+	border-width: 1px;
+	border-radius: 10px;
+}
+
+#posts_header h1{
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	border-width: 1px;
+	border-radius: 10px;
+}
+
+#post_table {
+	margin-top: 2px;
+	margin-left: 19%;
+	width: 38%;
+	border-radius: 3px;
+	border-width: 2px;
+	padding: 10px;
+	background-color: #66CCFF;
+}
+
+table tr th{
+	text-decoration: underline;
+}
+
+table tr td{ 
+	text-align: center;
+	color: black;
+	width: 17%;
+	line-height: 20px;
+	border-width: 1px;
+	border-style: inset;
+}
+
+#new_post {
+	float: left;
+	clear: both;
+}
+
+#show_post{
+	width: 25%;
+	background-color: #66CCFF;
+	border-radius: 8px;
+	border-width: 2px;
+}
+
+#show_post p {
+	padding: 3px;
+	border-bottom: 1px;
+	border-color: black;
+}
+
+#back_btn {
+	float: left;
+	clear: left;
+}
+
+#warning {
+	color: gray;
+	line-height: 5px;
+}
+

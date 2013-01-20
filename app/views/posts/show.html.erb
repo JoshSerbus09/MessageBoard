@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<div id="show_post">
+	<p>
+	  <b style="font-size: 16px"><%= @post.title %></b><br />
+
+	  <%= @post.message %><br/>
+	  <br />
+
+	  <b>By:</b>
+	  <%= @post.name %>
+	</p>
+</div>
+
+<%= link_to 'Edit Message', edit_post_path(@post) %> | 
+<%= link_to 'Go to Messages', posts_path %>
