@@ -9,7 +9,11 @@
       <div id="post_div">
         <p id="p_title"><b><u><%= post.title.humanize %></u></b></p>
           <%= post.message %>
+<<<<<<< HEAD
         <p id="sub_tag"><b>Submitted By: </b><%= post.name %> <%= time_ago_in_words(post.created_at.to_s) %> ago</p>
+=======
+        <p id="sub_tag"><b>Submitted By: </b><%= post.name %><  <%= time_ago_in_words(post.created_at.to_s) %> ago </p>
+>>>>>>> ea245a6759ccc48c3c799c9321fe026e9ddf1ed1
           <%= link_to 'Comments', post %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, :method => :delete, :confirm => 'Are you sure?' %>
       </div>
     <% end %>
