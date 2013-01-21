@@ -1,17 +1,18 @@
 #posts_main {
-	padding-top: 5px;
+	padding-top: 7px;
 	height: 100%;
-	width: 60%;
+	width: 65%;
 	margin-left: 20%;
-	background-color: gray;
+	background-color: #000033;
+	font-family: 'Fjalla One', sans-serif;
 }
 
 #posts_header {
 	width: 85%;
 	height: 10%;
 	margin-left: 7%;
-	padding-top: 3px;
-	background-color: blue;
+	padding-top: 5px;
+	background-color: #66CCFF;
 	border-width: 1px;
 	border-radius: 10px;
 }
@@ -19,13 +20,14 @@
 #posts_header h1{
 	text-align: center;
 	line-height: 40px;
-	color: white;
+	text-decoration: underline;
+	color: black;
 	border-width: 1px;
 	border-radius: 10px;
 }
 
 #p_title {
-	font-size: 14px;
+	font-size: 15px;
 }
 
 #post_div {
@@ -34,7 +36,7 @@
 	width: 75%;
 	border-radius: 3px;
 	border-width: 3px;
-	border-color: black;
+	color: black;
 	padding-left: 5px;
 	padding-top: 1px;
 }
@@ -48,31 +50,47 @@
 	clear: both;
 }
 
-#post_div a:hover {
-	color: gray;
+#post_div a {
+	color: black;
 }
 
 #sub_tag {
 	font-size: 11px;
 }
 
-#new_post {
-	float: left;
-	clear: both;
+#create_btn {
+	position: fixed;
+	margin-left: 56.3%;
+	color: white;
 }
 
 #show_post{
-	width: 50%;
-	padding: 1px;
+	width: 60%;
+	padding: 5px 0px 5px 10px;
 	background-color: #66CCFF;
 	border-radius: 15px;
 	border-width: 3px;
 }
 
 #show_post p {
-	padding: 3px;
-	border-bottom: 1px;
-	border-color: black;
+	padding: 5px;
+	margin: 5px 2% 0px 1.5%;
+	border-radius: 15px;
+	border-width: 3px;
+	background-color: #66CC33;
+}
+
+#com_div {
+	width: 86%;
+	margin: 4px 2% 2px 5%;
+	padding: 1px;
+	border-radius: 15px;
+	background-color: #66CC33;
+}
+
+#comment_form {
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 #back_btn {
@@ -84,4 +102,7 @@
 	color: gray;
 	line-height: 5px;
 }
+
+
+
 

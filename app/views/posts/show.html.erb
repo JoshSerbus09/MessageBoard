@@ -2,7 +2,7 @@
 
 <div id="show_post">
 	<p>
-	  <b style="font-size: 16px"><u><%= @post.title %></u></b><br />
+	  <b style="font-size: 18px"><u><%= @post.title %></u></b><br />
 
 	  <%= @post.message %><br/>
 	  <br />
@@ -12,16 +12,19 @@
 	  </b>
 	</p>
 
-	<h2>Comments</h2>
+	<h3 style="margin-left: 5%"><u>Comments</u></h3>
 	<% @post.comments.each do |comment| %>
-		<p>
-			<%= comment.body %>
-		</p>
-		<p>
-			<b style="font-size: 11px">Commenter</b>
-			- <%= comment.commenter %> at <%= time_ago_in_words(comment.created_at) %> 
-		</p>
-	<% end %>	
+		<div id="com_div">
+			<p>
+				<%= comment.body %>
+			</p>
+			<p>
+				- <%= comment.commenter.humanize %>, <%= time_ago_in_words(comment.created_at) %> ago
+			</p>
+		</div>
+	<% end %>
+
+	<br />	
 
 	<p id="comment_form">Add a comment:</p>
 	<%= form_for([@post, @post.comments.build]) do |f| %>
