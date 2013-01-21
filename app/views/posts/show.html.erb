@@ -19,11 +19,7 @@
 				<%= comment.body %>
 			</p>
 			<p>
-<<<<<<< HEAD
-				- <%= comment.commenter.humanize %>, <%= time_ago_in_words(comment.created_at) %> ago
-=======
 				- <%= comment.commenter.humanize %> <%= time_ago_in_words(comment.created_at) %> ago
->>>>>>> ea245a6759ccc48c3c799c9321fe026e9ddf1ed1
 			</p>
 		</div>
 	<% end %>
