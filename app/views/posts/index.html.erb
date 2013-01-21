@@ -4,9 +4,11 @@
   </div>
 
   <div id="post_table">
-    <% @posts.each do |post| %>
+    <% @posts.reverse.each do |post| %>
       <div id="post_div">
-        <p id="p_title"><b><u><%= post.title %></u></b></p>
+        <p id="p_title"><b><u><%= post.title %></u></b><br />
+          Submitted: <%= time_ago_in_words(post.created_at.to_s) %> ago
+        </p>
         <t><%= post.message %>
         <p><b>By: </b><%= post.name %></p>
           <%= link_to 'Expand', post %> <%= link_to 'Edit', edit_post_path(post) %> <%= link_to 'Delete', post, :method => :delete, :confirm => 'Are you sure?' %>
