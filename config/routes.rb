@@ -1,8 +1,6 @@
 MessageBoard::Application.routes.draw do
   resources :posts
 
-  resource :posts
-  resource :products
 
   get "home/index"
   # The priority is based upon order of creation:

@@ -1,29 +1,21 @@
-<div id="posts_header">
-  <h1>All Messages</h1>
+<div id="posts_main">
+  <div id="posts_header">
+    <h1>All Messages</h1>
+  </div>
+
+  <div id="post_table">
+    <% @posts.each do |post| %>
+      <div id="post_div">
+        <p id="p_title"><b><u><%= post.title %></u></b></p>
+        <t><%= post.message %>
+        <p><b>By: </b><%= post.name %></p>
+          <%= link_to 'Expand', post %> <%= link_to 'Edit', edit_post_path(post) %> <%= link_to 'Delete', post, :method => :delete, :confirm => 'Are you sure?' %>
+      </div>
+    <% end %>
+  </div>
+  <br />
+  <br />
+
+
+  <%= link_to 'Post New Message', new_post_path, :id => "new_post" %>
 </div>
-
-<div id="post_table">
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Title</th>
-      <th>Preview</th>
-    </tr>
-
-  <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.name %></td>
-      <td><%= post.title %></td>
-      <td><%= post.message[0, 12] %>...</td>
-      <td><%= link_to 'Read More', post %></td>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
-      <td><%= link_to 'Destroy', post, :method => :delete, :class => 'action', :confirm => 'Are you sure?' %></td>
-    </tr>
-  <% end %>
-  </table>
-</div>
-<br />
-<br />
-
-
-<%= link_to 'Post New Message', new_post_path, :id => "new_post" %>

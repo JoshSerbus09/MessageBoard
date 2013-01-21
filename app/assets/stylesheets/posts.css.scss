@@ -1,6 +1,16 @@
+#posts_main {
+	padding-top: 5px;
+	height: 100%;
+	width: 50%;
+	margin-left: 25%;
+	background-color: gray;
+}
+
 #posts_header {
-	width: 75%;
+	width: 85%;
 	height: 10%;
+	margin-left: 7%;
+	padding-top: 3px;
 	background-color: blue;
 	border-width: 1px;
 	border-radius: 10px;
@@ -14,27 +24,27 @@
 	border-radius: 10px;
 }
 
-#post_table {
-	margin-top: 2px;
-	margin-left: 19%;
-	width: 38%;
+#p_title {
+	font-size: 14px;
+}
+
+#post_div {
+	background-color: #66CCFF;
+	margin: 8px 0px 0px 11%; 
+	width: 75%;
 	border-radius: 3px;
 	border-width: 2px;
-	padding: 10px;
-	background-color: #66CCFF;
+	padding-left: 5px;
+	padding-top: 1px;
 }
 
-table tr th{
-	text-decoration: underline;
-}
-
-table tr td{ 
-	text-align: center;
+#post_div p { 
+	padding: 1px;
+	text-align: left;
 	color: black;
-	width: 17%;
+	width: 100%;
 	line-height: 20px;
-	border-width: 1px;
-	border-style: inset;
+	clear: both;
 }
 
 #new_post {
@@ -43,10 +53,11 @@ table tr td{
 }
 
 #show_post{
-	width: 25%;
+	width: 50%;
+	padding: 1px;
 	background-color: #66CCFF;
-	border-radius: 8px;
-	border-width: 2px;
+	border-radius: 15px;
+	border-width: 3px;
 }
 
 #show_post p {
