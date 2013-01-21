@@ -2,14 +2,44 @@
 
 <div id="show_post">
 	<p>
-	  <b style="font-size: 16px"><%= @post.title %></b><br />
+	  <b style="font-size: 16px"><u><%= @post.title %></u></b><br />
 
 	  <%= @post.message %><br/>
 	  <br />
 
-	  <b>By:</b>
-	  <%= @post.name %>
+	  <b style="font-size: 11px">By:
+	  	<%= @post.name %> <%= time_ago_in_words(@post.created_at) %> ago
+	  </b>
 	</p>
+
+	<h2>Comments</h2>
+	<% @post.comments.each do |comment| %>
+		<p>
+			<%= comment.body %>
+		</p>
+		<p>
+			<b style="font-size: 11px">Commenter</b>
+			- <%= comment.commenter %> at <%= time_ago_in_words(comment.created_at) %> 
+		</p>
+	<% end %>	
+
+	<p id="comment_form">Add a comment:</p>
+	<%= form_for([@post, @post.comments.build]) do |f| %>
+		<div class="field">
+			<%= f.label :commenter %><br />
+			<%= f.text_area :commenter %>
+		</div>
+
+		<div class="field">
+			<%= f.label :body %><br />
+			<%= f.text_area :body %>
+		</div>
+
+		<div class="actions">
+			<%= f.submit %>
+		</div>
+
+	<% end %>
 </div>
 
 <%= link_to 'Edit Message', edit_post_path(@post) %> | 

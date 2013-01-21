@@ -1,8 +1,8 @@
 #posts_main {
 	padding-top: 5px;
 	height: 100%;
-	width: 50%;
-	margin-left: 25%;
+	width: 60%;
+	margin-left: 20%;
 	background-color: gray;
 }
 
@@ -30,10 +30,11 @@
 
 #post_div {
 	background-color: #66CCFF;
-	margin: 8px 0px 0px 11%; 
+	margin: 8px 0px 0px 11.5%; 
 	width: 75%;
 	border-radius: 3px;
-	border-width: 2px;
+	border-width: 3px;
+	border-color: black;
 	padding-left: 5px;
 	padding-top: 1px;
 }
@@ -45,6 +46,14 @@
 	width: 100%;
 	line-height: 20px;
 	clear: both;
+}
+
+#post_div a:hover {
+	color: gray;
+}
+
+#sub_tag {
+	font-size: 11px;
 }
 
 #new_post {
