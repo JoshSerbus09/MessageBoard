@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <link rel="shortcut icon" href="favicon" type="image/x-icon">
-  <title> Message Board</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<html>
+		<head>
+		  <link rel="shortcut icon" href="favicon" type="image/x-icon">
+		  <title> Message Board</title>
+		  <%= stylesheet_link_tag    "application", :media => "all" %>
+		  <%= javascript_include_tag "application" %>
+		  <%= csrf_meta_tags %>
+		</head>
+		<body>
 
-<%= yield %>
+		<%= yield %>
 
-</body>
-</html>
+		</body>
+
+		<footer>
+			<div class="footer">A Ruby on Rails web app by Josh Serbus</div>
+		</footer>
+	</html>
