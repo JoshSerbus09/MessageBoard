@@ -5,5 +5,5 @@ class Post < ActiveRecord::Base
   validates_uniqueness_of :title, :message
   validates_length_of :message, :minimum => 15, :maximum => 160
 
-  has_many :comments, :dependent => :destroy
+  has_many :comments
 end
